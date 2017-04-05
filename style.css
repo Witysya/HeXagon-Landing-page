@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bitter|Open+Sans');
+
+body {
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding-bottom: 5px;
+    background: url(https://pp.userapi.com/c626216/v626216404/5a419/I8UUup_ttWw.jpg) no-repeat;
+    -webkit-background-size: 100%;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    word-spacing: 5px;
+}
+
+h1 {
+   font-family: 'Bitter', serif;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.line {
+    display: inline-block;
+    width:50%;
+    text-align: right;
+    float: right;
+    margin-top: 70px;
+    font-weight: bolder;
+    word-spacing: 2px;
+}
+
+nav a {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 11px;
+    background-color: #fd4c46;
+    padding: 24px 40px;
+    border: none;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 90px;
+    text-align: center;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+section {
+    font-style: normal;
+    font-family: 'Bitter', serif;
+    font-size: 40px;
+    width: 960px;
+    margin: 140px auto;
+    text-align: center;
+    height: calc (100%- 283px);
+}
+
+section h1 {
+    font-weight: lighter;
+    font-style: normal;
+    font-family: 'Bitter', serif;
+    font-size: 50px;
+    text-align: center;
+    font-size: 60px;
+}
+
+p {
+    color: #bebebe;
+    font-size: 13px;
+    text-align: center;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    background-color: #55514c;
+    padding: 30px 0;
+    padding-left: 100px;
+}
