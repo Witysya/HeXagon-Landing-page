@@ -1,0 +1,155 @@
+Процес виконання завдання:
+
+1)  Спершу я встановила GIT та відкрила термінал GIT Bash
+2)  Перевірила, в якій директорії я знаходжусь
+
+        $ pwd
+        /c/Users/Victory
+
+
+3)  Змінила директорію на ту, в якій зберігається мій проект
+
+        Victory@DESKTOP-EEGA2TD MINGW64
+        $ cd 'D:\QA\HTML CSS\HEXAGON HTML CSS'
+
+
+4)  Далі я ініціалізувала git-репозиторій в поточній папці
+
+        Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS
+        $ git init
+        Initialized empty Git repository in D:/QA/HTML CSS/HEXAGON HTML CSS/.git/
+
+
+5)  Ввела команду "git status" щоб побачити поточний стан git-репозиторію
+
+        Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
+        $ git status
+        On branch master
+        
+        Initial commit
+        
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+        
+                description.txt
+                index.html
+                style.css
+        
+        nothing added to commit but untracked files present (use "git add" to track)
+  
+* Результат команди "git status" показав:
+  - що я знаходжусь у гілці master
+  - в репозиторії присутні 3 файли які не відслідковуються
+
+
+6)  Я додала файли з HTML та CSS кодом на відслідковування
+
+        $ git add index.html style.css
+        
+        Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
+        $ git status
+        On branch master
+        
+        Initial commit
+        
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+        
+                new file:   index.html
+                new file:   style.css
+        
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+        
+                description.txt
+
+
+7)  Закомітила зміни (новододані файли index.html та style.css)
+
+        $ git commit -m "Project initial commit"
+        [master (root-commit) 2cf4225] Project initial commit
+         2 files changed, 142 insertions(+)
+         create mode 100644 index.html
+         create mode 100644 style.css
+
+
+8)  Додала новий віддалений репозиторій (який був попередньо створений на гітхабі)
+
+        $ git remote add origin https://github.com/Witysya/HeXagon-Landing-page.git
+        
+        Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
+        $ git remote -v
+        origin  https://github.com/Witysya/HeXagon-Landing-page.git (fetch)
+        origin  https://github.com/Witysya/HeXagon-Landing-page.git (push)
+
+
+9)  Завантажила свої зміни у віддалений репозиторій
+
+        $ git push origin master
+        To https://github.com/Witysya/HeXagon-Landing-page.git
+         ! [rejected]        master -> master (fetch first)
+        error: failed to push some refs to 'https://github.com/Witysya/HeXagon-Landing-page.git'
+        hint: Updates were rejected because the remote contains work that you do
+        hint: not have locally. This is usually caused by another repository pushing
+        hint: to the same ref. You may want to first integrate the remote changes
+        hint: (e.g., 'git pull ...') before pushing again.
+        hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+* Не вдалось завантажити свої зміни, через те що на віддаленому репозиторії
+  присутній файл README.md який відсутній в локальному репозиторії
+
+
+10) Оновила стан віддаленого репозиторію
+
+        $ git pull origin master
+        From https://github.com/Witysya/HeXagon-Landing-page
+         * branch            master     -> FETCH_HEAD
+        fatal: refusing to merge unrelated histories
+
+* Не вдалось оновитись через "fatal: refusing to merge unrelated histories".
+  Загуглила що потрібно додати параметр --allow-unrelated-histories
+
+        $ git pull origin master --allow-unrelated-histories
+        From https://github.com/Witysya/HeXagon-Landing-page
+         * branch            master     -> FETCH_HEAD
+        Merge made by the 'recursive' strategy.
+         README.md | 2 ++
+         1 file changed, 2 insertions(+)
+         create mode 100644 README.md
+
+
+11)  Переглянула всю історію комітів
+
+        $ git log
+        commit aa25a466380420348183af0463c4ba446d61b4f4
+        Merge: 2cf4225 5d819c2
+        Author: Victoria Horditsa <v.horditsa@gmail.com>
+        Date:   Wed Apr 5 23:42:29 2017 +0300
+        
+            Merge branch 'master' of https://github.com/Witysya/HeXagon-Landing-page
+        
+            Add README.md file
+        
+        commit 2cf42255fa795148c9dd5690687ea63d9863026e
+        Author: Victoria Horditsa <v.horditsa@gmail.com>
+        Date:   Wed Apr 5 23:24:57 2017 +0300
+        
+            Project initial commit
+        
+        commit 5d819c223b81bf4d8518a7ed72fcd8f19eaf05d2
+        Author: Witysya <v.horditsa@gmail.com>
+        Date:   Wed Apr 5 22:42:10 2017 +0300
+        
+            Initial commit
+
+
+12) Завантажила зміни до віддаленого репозиторію
+
+        $ git push origin master
+        Counting objects: 6, done.
+        Delta compression using up to 4 threads.
+        Compressing objects: 100% (6/6), done.
+        Writing objects: 100% (6/6), 1.82 KiB | 0 bytes/s, done.
+        Total 6 (delta 0), reused 0 (delta 0)
+        To https://github.com/Witysya/HeXagon-Landing-page.git
+           5d819c2..aa25a46  master -> master
