@@ -1,6 +1,13 @@
 Процес виконання завдання:
-
 1)  Спершу я встановила GIT та відкрила термінал GIT Bash
+  Задала ім'я:
+
+        $ git config --global user.name "Victory"
+
+ Задала мейл:
+
+        $ git config --global user.email v.horditsa@gmail.com
+
 2)  Перевірила, в якій директорії я знаходжусь
 
         $ pwd
@@ -145,73 +152,43 @@
 
 12) Завантажила зміни до віддаленого репозиторію
 
-        $ git push origin master
-        Counting objects: 6, done.
-        Delta compression using up to 4 threads.
-        Compressing objects: 100% (6/6), done.
-        Writing objects: 100% (6/6), 1.82 KiB | 0 bytes/s, done.
-        Total 6 (delta 0), reused 0 (delta 0)
-        To https://github.com/Witysya/HeXagon-Landing-page.git
-           5d819c2..aa25a46  master -> master
-
-13) Додала цей файл 
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$ git add description.txt
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$ git status
-On branch master
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-        new file:   description.txt
+          $ git push origin master
+          Counting objects: 6, done.
+          Delta compression using up to 4 threads.
+          Compressing objects: 100% (6/6), done.
+          Writing objects: 100% (6/6), 1.82 KiB | 0 bytes/s, done.
+          Total 6 (delta 0), reused 0 (delta 0)
+          To https://github.com/Witysya/HeXagon-Landing-page.git
+            5d819c2..aa25a46  master -> master
 
 
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
+13) Додала файл Description.txt
+
+          $ git add description.txt
+
+          $ git status
+          On branch master
+          Changes to be committed:
+          (use "git reset HEAD <file>..." to unstage)
+          new file:   description.txt
 
 
 14 )Закомітила ці зміни
-$ git commit -m "Add a new File Description"
-[master 15f6e0d] Add a new File Description
- 1 file changed, 155 insertions(+)
- create mode 100644 description.txt
+          $ git commit -m "Add a new File Description"
+          [master 15f6e0d] Add a new File Description
+          1 file changed, 155 insertions(+)
+          create mode 100644 description.txt
 
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
+     
+15) Завантажила зміни до віддаленого репозиторію
 
-
-15)
-$ git push origin master
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 2.41 KiB | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/Witysya/HeXagon-Landing-page.git
-   aa25a46..15f6e0d  master -> master
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-16 )
-$ git pull
-There is no tracking information for the current branch.
-Please specify which branch you want to merge with.
-See git-pull(1) for details.
-
-    git pull <remote> <branch>
-
-If you wish to set tracking information for this branch you can do so with:
-
-    git branch --set-upstream-to=origin/<branch> master
+          $ git push origin master
+          Counting objects: 3, done.
+          Delta compression using up to 4 threads.
+          Compressing objects: 100% (3/3), done.
+          Writing objects: 100% (3/3), 2.41 KiB | 0 bytes/s, done.
+          Total 3 (delta 0), reused 0 (delta 0)
+          To https://github.com/Witysya/HeXagon-Landing-page.git
+             aa25a46..15f6e0d  master -> master
 
 
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$ ^C
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$ ^C
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$ ^C
-
-Victory@DESKTOP-EEGA2TD MINGW64 /d/QA/HTML CSS/HEXAGON HTML CSS (master)
-$
